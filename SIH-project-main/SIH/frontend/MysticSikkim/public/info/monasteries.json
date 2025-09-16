@@ -1,0 +1,230 @@
+{
+  "monasteries": [
+    {
+      "name": "Rumtek Monastery",
+      "photo": "/images/rumtek.jpg",
+      "description": [
+        "Karma Kagyu sect monastery built as Karmapa’s seat in exile",
+        "Originally founded in the 12th century; reconstructed by the 16th Gyalwa Karmapa in the 1960s",
+        "Houses the Golden Stupa containing the 16th Karmapa’s remains",
+        "Located ~24 km from Gangtok in a forested valley"
+      ],
+      "history": "Originally built in the 12th century; present complex established by the 16th Karmapa (1960s)",
+      "timings": "6:00 AM - 6:00 PM daily",
+      "nearby": [
+        "MG Marg Market (Gangtok)",
+        "Kangchenjunga National Park",
+        "Ranka Monastery"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757090741669!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzY5ZTcxVWc.!2m2!1d27.28854528167496!2d88.56161848386864!3f162.98748506030543!4f-4.673275315830622!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Enchey Monastery",
+      "photo": "/images/enchey.jpg",
+      "description": [
+        "Built in 1909 (rebuilt 1948 after a fire)",
+        "Belongs to the Nyingma tradition; originally founded ~200 years ago",
+        "Dedicated to Buddha, Avalokiteshvara and Guru Padmasambhava",
+        "Famous for colorful Cham dance festival",
+        "Perched on a hill (3 km from Gangtok) with views of Kanchenjunga"
+      ],
+      "history": "Built in 1909 and rebuilt in 1948 after a fire",
+      "timings": "9:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Ganesh Tok Viewpoint (5 km)",
+        "Bakthang Waterfalls (5.5 km)",
+        "Hanuman Tok (7 km)",
+        "Himalayan Zoological Park (7.6 km)"
+      ],
+      "mapIframe": "<iframe src='https://www.google.com/maps/embed?pb=!4v1681234567890!6m8!1m7!1sYOUR_STREETVIEW_ID!2m2!1d27.28854528167496!2d88.56161848386864!3f162.98748506030543!4f-4.673275315830622!5f0.7820865974627469' width='600' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+    },
+    {
+      "name": "Phodong Monastery",
+      "photo": "/images/phodong.webp",
+      "description": [
+        "Constructed in 1740 by the 4th Chogyal Gyurmed Namgyal",
+        "Affiliated to the Karma Kagyu lineage; one of six major monasteries of Sikkim",
+        "Houses ~260 monks and is famous for its murals",
+        "Annual Cham dance festival held in Dec/Jan"
+      ],
+      "history": "Built in 1740 (rebuilt 1977 after an earthquake)",
+      "timings": "8:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Labrang Monastery (adjacent)",
+        "Tumlong Palace and Monastery",
+        "Seven Sisters Waterfall (approx. 30 km)",
+        "Gonjang Monastery (Gangtok area)"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757091317406!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREUtSTJBbXdF!2m2!1d27.41250043052966!2d88.58361050014649!3f205.67750095743415!4f-6.020377664173239!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Dubdi Monastery",
+      "photo": "/images/dubdi.jpg",
+      "description": [
+        "Founded in 1701 by Lhatsun Namkha Jigme (Hermit’s Cell)",
+        "Oldest monastery in Sikkim; follows the Nyingma tradition",
+        "Contains statues of the founding lamas and rare manuscripts",
+        "Part of Yuksom’s Buddhist pilgrimage circuit"
+      ],
+      "history": "Established in 1701 (known as Yuksom Monastery)",
+      "timings": "7:00 AM - 4:00 PM daily",
+      "nearby": [
+        "Pemayangtse Monastery",
+        "Khecheopalri Lake",
+        "Rabdentse Ruins",
+        "Kanchenjunga Falls"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757091615833!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ0V6djI5NUFF!2m2!1d27.36632594282752!2d88.22961482878193!3f173.21861152615907!4f-1.825344046869489!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Gonjang Monastery",
+      "photo": "/images/Gonjang.jpg",
+      "description": [
+        "Established in 1981 by Tingkye Gonjang Rinpoche (Nyingma)",
+        "Altitude ~6066 ft; located ~7–8 km from Gangtok",
+        "Contains idols of Khen-lop-Choe-sum and other unique Tibetan relics",
+        "Blessed by the Dalai Lama; home to ~100 monks"
+      ],
+      "history": "Founded in 1981; blessed by the Dalai Lama",
+      "timings": "7:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Tsomgo (Changu) Lake",
+        "Ganesh Tok Viewpoint",
+        "Baba Harbhajan Singh Memorial Temple",
+        "Himalayan Zoological Park",
+        "Hanuman Tok"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757091684093!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREUyYkN1UUE.!2m2!1d27.36884449623924!2d88.6132235970522!3f1.367549822115734!4f0.6692525063382675!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Samdruptse Monastery",
+      "photo": "/images/samdruptse.jpg",
+      "description": [
+        "Features a 45 m golden statue of Guru Padmasambhava (Second Buddha)",
+        "Name means 'Wish-Fulfilling Hill'; statue inaugurated in 2004",
+        "Important pilgrimage site with meditation hall and landscaped gardens",
+        "Perched on a hilltop offering panoramic views of Kanchenjunga"
+      ],
+      "history": "Completed in 2004; houses the Samdruptse statue of Guru Padmasambhava",
+      "timings": "8:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Maenam Wildlife Sanctuary",
+        "Namchi Rock Garden",
+        "Sai Baba Temple (Namchi)",
+        "Ralang Monastery",
+        "Temi Tea Garden"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757091779626!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V2NkxaTlE.!2m2!1d27.17976886165958!2d88.37928758778976!3f55.982566773339585!4f12.483944538214317!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Tashiding Monastery",
+      "photo": "/images/tashiding.jpg",
+      "description": [
+        "Founded 1641 by Ngadak Sempa Chempo Phunshok Rigzin (Nyingma)",
+        "Name means 'Devoted Central Glory'; among the holiest in Sikkim",
+        "Perched on a 5000 ft hilltop between the Rathong and Rangeet rivers",
+        "Hosts the annual Bumchu (holy water) festival (Tibetan new year)"
+      ],
+      "history": "Established 1641; famed for the Bumchu holy-water vase ceremony",
+      "timings": "7:00 AM - 6:00 PM daily",
+      "nearby": [
+        "Norbugang Coronation Throne & Chorten",
+        "Dubdi Monastery (Yuksom)",
+        "Kartok Monastery & Kartok Lake"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757091835138!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0V6b09UVnc.!2m2!1d27.3080960299431!2d88.29783391014004!3f260!4f10!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Ralang Monastery",
+      "photo": "/images/ralang.jpg",
+      "description": [
+        "Founded 1768; Kagyu sect monastery near Ravangla",
+        "Known for the Pang Lhabsol festival (honoring Kanchenjunga) in September",
+        "Renowned for extensive Tibetan Buddhist thangka paintings",
+        "Hosts colorful Cham dance festivals (e.g. Mahakala festival)"
+      ],
+      "history": "Established 1768 by the 12th Gyaltsab Rinpoche (Kagyu sect); rebuilt in 1995",
+      "timings": "8:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Buddha Park (Ravangla)",
+        "Ralong Hot Springs",
+        "Temi Tea Estate",
+        "Maenam Hill Sanctuary"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757091886359!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRF91ZnoteXdF!2m2!1d27.32849856209447!2d88.33547316295622!3f174.6029388311743!4f-18.081083419930593!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Labrang Monastery",
+      "photo": "/images/labrang.webp",
+      "description": [
+        "Built 1843–1844 by Gyalshe Rigzing Chempa (son of King Tsugphud Namgyal)",
+        "Nyingma sect; located 2 km above Phodong Monastery",
+        "Unique wooden structure (reinforced after 2006 quake)",
+        "Houses a museum of ancient Buddha statues, sutras and murals"
+      ],
+      "history": "Founded 1844 by Gyalshe Rigzing Chempa (Nyingma); renovated in 1978:contentReference[oaicite:67]{index=67}",
+      "timings": "8:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Phodong Monastery (2 km)",
+        "Seven Sisters Waterfall (approx. 30 km)"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757091991568!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ0UzTERBNmdF!2m2!1d35.19396620948748!2d102.5052288988086!3f4.1898928922408345!4f-20.069038307942833!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Pemayangtse Monastery",
+      "photo": "/images/pemayagtse.jpg",
+      "description": [
+        "Founded 1705 by Lama Lhatsun Chempo (expanded by Chogyal Chakdor Namgyal)",
+        "One of Sikkim’s oldest monasteries (Nyingma); main seat of the Nyingma lineage",
+        "Perched at 2100 m overlooking the ancient Rabdentse ruins",
+        "Famous for the annual Cham dance festival (Tibetan New Year, Feb)"
+      ],
+      "history": "Established 1705 by Lhatsun Chempo; royal family temple for Nyingma sect",
+      "timings": "9:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Rabdentse Ruins",
+        "Kanchenjunga Falls",
+        "Khecheopalri Lake",
+        "Sanga Choeling Monastery"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757092048739!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREVoSlhucEFF!2m2!1d27.30518919282202!2d88.25156580066201!3f168.64116158604602!4f22.401838605056!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Sanghak Monastery",
+      "photo": "/images/sanghak.jpg",
+      "description": [
+        "Built 1697 by Lama Lhatsun Chempo; Nyingma tradition",
+        "Second oldest monastery in Sikkim ('Place of Secret Mantras')",
+        "Preserves ancient clay statues and relics from the 17th century",
+        "Perched on a ridge with views of the Himalayas and Pemayangtse"
+      ],
+      "history": "Founded 1697 by Lhatsun Chempo (Nyingma sect); contains precious relics",
+      "timings": "8:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Pemayangtse Monastery",
+        "Rabdentse Ruins",
+        "Khecheopalri Lake",
+        "Dubdi Monastery"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757092093717!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDJ6OW1Cb1FF!2m2!1d27.29781227835666!2d88.22164837000456!3f240!4f10!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    },
+    {
+      "name": "Lingdim Monastery",
+      "photo": "/images/lingdim.jpg",
+      "description": [
+        "Also known as Ranka Monastery; inaugurated 1999 by Zurmang Gharwang Rinpoche",
+        "Zurmang Kagyud tradition; Tibetan-style complex set over 21 acres",
+        "Hosts a 5 m golden Buddha and a large collection of thangka paintings",
+        "Scenic hillside location near Ranka (~16 km from Gangtok)"
+      ],
+      "history": "Built in 1999 by the Zurmang Gharwang Rinpoche (Kagyu sect)",
+      "timings": "6:00 AM - 5:00 PM daily",
+      "nearby": [
+        "Banjhakri Falls (Ranka)",
+        "Rumtek Monastery"
+      ],
+      "mapIframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1757092153313!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ011T2JkcmdF!2m2!1d27.33118603686677!2d88.5790941249777!3f352.68292!4f0!5f0.7820865974627469\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+
+    }
+  ]
+}
