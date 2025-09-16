@@ -198,31 +198,57 @@ export default function Home() {
           </motion.button>
 
           <motion.div 
-            className="flex flex-col md:flex-row gap-6 justify-center items-center"
+            className="flex flex-wrap gap-4 justify-center items-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5 }}
           >
             <NavLink to="/virtualtour">
               <motion.button 
-                className="px-10 py-4 bg-white/15 backdrop-blur-md border-2 border-yellow-400/40 rounded-2xl text-white font-semibold text-lg hover:bg-white/25 transition-all duration-300"
+                className="px-8 py-3 bg-white/15 backdrop-blur-md border-2 border-yellow-400/40 rounded-2xl text-white font-semibold hover:bg-white/25 transition-all duration-300"
                 whileHover={{ scale: 1.05, borderColor: 'rgba(255,215,0,0.8)' }}
                 whileTap={{ scale: 0.95 }}
               >
-                Explore Sacred Monasteries
+                🏛️ Explore Monasteries
               </motion.button>
             </NavLink>
-            <NavLink to="/archives">
+            <NavLink to="/planner">
               <motion.button 
-                className="px-10 py-4 bg-gradient-to-r from-yellow-600 to-amber-600 rounded-2xl text-white font-bold text-lg shadow-xl border-2 border-yellow-400/50"
+                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl text-white font-bold shadow-xl border-2 border-purple-400/50"
                 whileHover={{ 
                   scale: 1.05, 
-                  boxShadow: '0 20px 40px rgba(255,215,0,0.3)',
-                  borderColor: 'rgba(255,215,0,1)'
+                  boxShadow: '0 20px 40px rgba(147,51,234,0.3)',
+                  borderColor: 'rgba(147,51,234,1)'
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Virtual Heritage Tour
+                🧠 AI Smart Planner
+              </motion.button>
+            </NavLink>
+            <NavLink to="/social">
+              <motion.button 
+                className="px-8 py-3 bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl text-white font-bold shadow-xl border-2 border-green-400/50"
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: '0 20px 40px rgba(34,197,94,0.3)',
+                  borderColor: 'rgba(34,197,94,1)'
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                👥 Join Community
+              </motion.button>
+            </NavLink>
+            <NavLink to="/services">
+              <motion.button 
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl text-white font-bold shadow-xl border-2 border-blue-400/50"
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: '0 20px 40px rgba(59,130,246,0.3)',
+                  borderColor: 'rgba(59,130,246,1)'
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                🛎️ Premium Services
               </motion.button>
             </NavLink>
           </motion.div>

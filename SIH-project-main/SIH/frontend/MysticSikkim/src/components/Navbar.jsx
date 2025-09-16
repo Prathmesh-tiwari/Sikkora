@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { Mountain, Menu, X, Sparkles } from "lucide-react";
 
-export default function Navbar({ setCurrentPage }) {
+export default function Navbar({ setCurrentPage, user, onLogout }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -18,6 +18,9 @@ export default function Navbar({ setCurrentPage }) {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Virtual Tour", path: "/virtualtour" },
+    { name: "Smart Planner", path: "/planner" },
+    { name: "Social", path: "/social" },
+    { name: "Services", path: "/services" },
     { name: "Map", path: "/map" },
     { name: "Archives", path: "/archives" },
     { name: "Calendar", path: "/calendar" }
@@ -71,49 +74,51 @@ export default function Navbar({ setCurrentPage }) {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 + 0.3 }}
-              >
-                <NavLink
-                  to={item.path}
-                  onClick={() => setCurrentPage && setCurrentPage(item.path)}
-                  className={({ isActive }) =>
-                    `relative px-4 py-2 text-white font-medium transition-all duration-300 hover:text-yellow-300 ${
-                      isActive ? "text-yellow-300" : ""
-                    }`
-                  }
+          <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
+            <div className="flex items-center justify-between w-full max-w-4xl">
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 0.3 }}
                 >
-                  {({ isActive }) => (
-                    <>
-                      <span className="relative z-10">{item.name}</span>
-                      {isActive && (
+                  <NavLink
+                    to={item.path}
+                    onClick={() => setCurrentPage && setCurrentPage(item.path)}
+                    className={({ isActive }) =>
+                      `relative px-3 py-2 text-white font-medium transition-all duration-300 hover:text-yellow-300 whitespace-nowrap ${
+                        isActive ? "text-yellow-300" : ""
+                      }`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <span className="relative z-10 text-sm">{item.name}</span>
+                        {isActive && (
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-yellow-600/20 to-amber-600/20 rounded-lg border border-yellow-400/30"
+                            layoutId="activeTab"
+                            initial={false}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                          />
+                        )}
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-yellow-600/20 to-amber-600/20 rounded-lg border border-yellow-400/30"
-                          layoutId="activeTab"
-                          initial={false}
-                          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-amber-400"
+                          initial={{ scaleX: 0 }}
+                          whileHover={{ scaleX: 1 }}
+                          transition={{ duration: 0.3 }}
                         />
-                      )}
-                      <motion.div
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-amber-400"
-                        initial={{ scaleX: 0 }}
-                        whileHover={{ scaleX: 1 }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    </>
-                  )}
-                </NavLink>
-              </motion.div>
-            ))}
+                      </>
+                    )}
+                  </NavLink>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
-          {/* Premium Effects */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* User Profile */}
+          <div className="hidden lg:flex items-center space-x-4">
             <motion.div
               className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full flex items-center justify-center"
               animate={{ rotate: 360 }}
@@ -122,12 +127,22 @@ export default function Navbar({ setCurrentPage }) {
               <Sparkles className="w-4 h-4 text-white" />
             </motion.div>
             <div className="w-px h-8 bg-gradient-to-b from-transparent via-yellow-400/50 to-transparent" />
-            <span className="text-yellow-300 text-sm font-medium">SIKKORA Premium</span>
+            <NavLink to="/profile">
+              <motion.div 
+                className="flex items-center gap-3 px-4 py-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="w-8 h-8 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">{user?.name?.charAt(0) || 'U'}</span>
+                </div>
+                <span className="text-white text-sm font-medium">{user?.name || 'User'}</span>
+              </motion.div>
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden w-10 h-10 bg-gradient-to-r from-yellow-600 to-amber-600 rounded-lg flex items-center justify-center"
+            className="lg:hidden w-10 h-10 bg-gradient-to-r from-yellow-600 to-amber-600 rounded-lg flex items-center justify-center"
             onClick={() => setIsOpen(!isOpen)}
             whileTap={{ scale: 0.95 }}
           >
@@ -162,7 +177,7 @@ export default function Navbar({ setCurrentPage }) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden absolute top-full left-0 right-0 bg-gradient-to-br from-red-900/98 via-amber-900/98 to-yellow-800/98 backdrop-blur-xl border-b-2 border-yellow-400/30"
+            className="lg:hidden absolute top-full left-0 right-0 bg-gradient-to-br from-red-900/98 via-amber-900/98 to-yellow-800/98 backdrop-blur-xl border-b-2 border-yellow-400/30"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}

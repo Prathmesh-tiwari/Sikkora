@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { Mountain, Mail, Phone, MapPin, Github, Linkedin, Twitter, Heart, Code, Users, Award } from "lucide-react";
 
 export default function Footer() {
-  const teamMembers = [
-    { name: "Arjun Sharma", role: "Lead Developer", email: "arjun.sharma@consolecrusaders.dev" },
-    { name: "Priya Patel", role: "UI/UX Designer", email: "priya.patel@consolecrusaders.dev" },
-    { name: "Rahul Kumar", role: "Backend Engineer", email: "rahul.kumar@consolecrusaders.dev" },
-    { name: "Sneha Gupta", role: "Frontend Developer", email: "sneha.gupta@consolecrusaders.dev" },
-    { name: "Vikram Singh", role: "DevOps Engineer", email: "vikram.singh@consolecrusaders.dev" },
-    { name: "Anita Rao", role: "Product Manager", email: "anita.rao@consolecrusaders.dev" }
+  const teamRoles = [
+    { role: "Lead Developer", description: "Full-stack development and architecture" },
+    { role: "UI/UX Designer", description: "Premium interface and user experience design" },
+    { role: "Backend Engineer", description: "Server infrastructure and API development" },
+    { role: "Frontend Developer", description: "React components and interactive features" },
+    { role: "DevOps Engineer", description: "Deployment and system optimization" },
+    { role: "Product Manager", description: "Project coordination and feature planning" }
   ];
 
   const socialLinks = [
@@ -202,9 +202,9 @@ export default function Footer() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index) => (
+            {teamRoles.map((role, index) => (
               <motion.div
-                key={member.name}
+                key={role.role}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -217,13 +217,11 @@ export default function Footer() {
               >
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
+                    <Code className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-white font-bold text-lg mb-1">{member.name}</h4>
-                  <p className="text-yellow-300 text-sm mb-3">{member.role}</p>
-                  <p className="text-white/60 text-xs">{member.email}</p>
+                  <h4 className="text-white font-bold text-lg mb-1">{role.role}</h4>
+                  <p className="text-yellow-300 text-sm mb-3">{role.description}</p>
+                  <p className="text-white/60 text-xs">Console Crusaders Team</p>
                 </div>
               </motion.div>
             ))}
@@ -239,7 +237,7 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <div className="flex items-center gap-2 text-white/70 mb-4 md:mb-0">
-            <span>© 2024 SIKKORA. Crafted with</span>
+            <span>© 2025 SIKKORA. Crafted with</span>
             <Heart className="w-4 h-4 text-red-400 animate-pulse" />
             <span>by Console Crusaders</span>
           </div>

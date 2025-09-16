@@ -56,25 +56,68 @@ export default function FloatingChatbot() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
-  const getMockResponse = (message) => {
-    const responses = {
-      hello: "Namaste! How can I help you explore Sikkim today? 🏔️",
-      places: "Sikkim offers amazing places like Gangtok, Pelling, Lachung, and the sacred Gurudongmar Lake! Which interests you most?",
-      weather: "Sikkim has pleasant weather year-round. Best time to visit is March-May and September-November for clear mountain views! ❄️",
-      food: "Try authentic Sikkimese cuisine like Momos, Thukpa, Gundruk, and Sel Roti. Don't miss the local organic tea! 🍜",
-      trek: "Popular treks include Goecha La, Dzongri, Green Lake, and Singalila Ridge. Each offers breathtaking Himalayan views! 🥾",
-      culture: "Sikkim is rich in Buddhist culture with beautiful monasteries like Rumtek, Pemayangtse, and Enchey. Experience the peaceful spirituality! 🙏",
-      default: "I'm here to help you discover the mystical beauty of Sikkim! Ask me about places to visit, local culture, food, or trekking adventures. 🌄"
-    };
-    
-    const lowerMsg = message.toLowerCase();
-    if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) return responses.hello;
-    if (lowerMsg.includes('place') || lowerMsg.includes('visit')) return responses.places;
-    if (lowerMsg.includes('weather') || lowerMsg.includes('climate')) return responses.weather;
-    if (lowerMsg.includes('food') || lowerMsg.includes('eat')) return responses.food;
-    if (lowerMsg.includes('trek') || lowerMsg.includes('hike')) return responses.trek;
-    if (lowerMsg.includes('culture') || lowerMsg.includes('monastery')) return responses.culture;
-    return responses.default;
+  const getGeminiResponse = async (message) => {
+    try {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyDq2nCHUJZ55_YGRTdZiI4zBtk_9xAAif4`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: `You are SIKKORA AI, an expert premium guide for Sikkim tourism and Buddhist monastery exploration.
+              
+              CONTEXT: You help tourists explore Sikkim's sacred monasteries:
+              - Rumtek Monastery (Dharma Chakra Centre, seat of Karmapa, established 1966)
+              - Pemayangtse Monastery (Perfect Sublime Lotus, Nyingma order, established 1705)
+              - Enchey Monastery (The Solitary Temple, famous for Cham dance, established 1909)
+              - Tashiding Monastery (Most sacred in Sikkim, Bumchu festival, established 1717)
+              - Dubdi Monastery (First monastery in Sikkim, established 1701)
+              - Lingdum Monastery (Modern spiritual haven, established 1999)
+              
+              SERVICES AVAILABLE:
+              - 360° Google Earth virtual tours
+              - Hotel bookings (Elgin Nor-Khill, Mayfair Resort, Hotel Tashidelek)
+              - Activity bookings (Monastery tours ₹2,500, Tsomgo Lake ₹3,500, Nathula Pass ₹4,000)
+              - Transport services (Taxis ₹12-18/km, Airport transfers ₹1500-2000)
+              - Trekking packages (Goecha La ₹15,000, Dzongri ₹12,000)
+              - Local dining (Taste of Tibet, The Square Restaurant)
+              
+              USER MESSAGE: "${message}"
+              
+              Provide helpful, specific information about:
+              ✅ Monastery details, history, significance
+              ✅ Booking assistance with exact prices
+              ✅ Transport options with contact numbers
+              ✅ Cultural insights and festival information
+              ✅ Weather and best visiting times
+              ✅ Local cuisine recommendations
+              ✅ Trekking and adventure activities
+              
+              Keep responses informative, friendly, and include relevant emojis. Mention specific prices and contact details when relevant.`
+            }]
+          }]
+        })
+      });
+      
+      const data = await response.json();
+      return data.candidates?.[0]?.content?.parts?.[0]?.text || "Namaste! I'm here to help you explore Sikkim's sacred monasteries and plan your perfect spiritual journey! 🏔️🙏";
+    } catch (error) {
+      console.error('Gemini API Error:', error);
+      // Fallback responses based on keywords
+      const lowerMsg = message.toLowerCase();
+      if (lowerMsg.includes('book') || lowerMsg.includes('hotel')) {
+        return "🏨 I can help you book accommodations! Try The Elgin Nor-Khill (₹8,500/night) for luxury or Hotel Tashidelek (₹4,500/night) for budget stays. Visit our Services section for direct booking links!";
+      }
+      if (lowerMsg.includes('monastery') || lowerMsg.includes('temple')) {
+        return "🏛️ Sikkim has amazing monasteries! Rumtek (seat of Karmapa), Pemayangtse (oldest), Enchey (Cham dances), and Tashiding (most sacred). Each has unique 360° virtual tours available!";
+      }
+      if (lowerMsg.includes('transport') || lowerMsg.includes('taxi')) {
+        return "🚗 Local transport options: Sikkim Taxi Service (₹15/km, +91-9832123456), Mountain Cab (₹12/km), Airport transfers (₹1500-2000). Check our Services hub for more details!";
+      }
+      return "🙏 I'm here to help you explore Sikkim's sacred heritage! Ask me about monasteries, bookings, transport, or cultural experiences!";
+    }
   };
 
   const sendMessage = async () => {
@@ -85,13 +128,20 @@ export default function FloatingChatbot() {
     setInput("");
     setIsTyping(true);
 
-    setTimeout(() => {
+    try {
+      const response = await getGeminiResponse(userMessage);
       setIsTyping(false);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: getMockResponse(userMessage) },
+        { sender: "bot", text: response },
       ]);
-    }, 800);
+    } catch (error) {
+      setIsTyping(false);
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", text: "I'm here to help you discover Sikkim's sacred heritage! Ask me about monasteries, culture, or travel tips! 🏔️" },
+      ]);
+    }
   };
 
   return (
