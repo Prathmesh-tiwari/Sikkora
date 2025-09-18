@@ -106,22 +106,22 @@ export default function VoiceAssistant() {
     if (lowerCommand.includes('hey sikkora') || lowerCommand.includes('hello sikkora')) {
       response = 'Namaste! I am your SIKKORA voice assistant. How can I help you explore Sikkim today?';
     } else if (lowerCommand.includes('monastery') || lowerCommand.includes('temple')) {
-      response = 'Sikkim has beautiful monasteries like Rumtek, Pemayangtse, Enchey, and Tashiding. Which one would you like to know about?';
+      response = 'Sikkim has beautiful monasteries like Rumtek, Pemayangtse, Enchey, and Tashiding. Each offers unique architecture and spiritual experiences. Would you like to visit the virtual tour?';
     } else if (lowerCommand.includes('book') || lowerCommand.includes('hotel')) {
-      response = 'Opening booking services.';
-      setTimeout(() => window.location.href = '/services', 2000);
+      response = 'I can help you find accommodation in Sikkim - from luxury resorts to homestays and budget hotels. Opening booking services now.';
+      setTimeout(() => window.location.href = '/services', 3000);
     } else if (lowerCommand.includes('weather') || lowerCommand.includes('climate')) {
-      response = 'The best time to visit Sikkim is March to May and September to November for clear mountain views and pleasant weather.';
+      response = 'Best time to visit Sikkim is March to May and September to November for clear mountain views and pleasant weather. Check our weather updates for current conditions.';
     } else if (lowerCommand.includes('plan') || lowerCommand.includes('itinerary')) {
-      response = 'Opening the smart planner.';
-      setTimeout(() => window.location.href = '/planner', 2000);
+      response = 'Our AI smart planner will create a personalized itinerary based on your interests, budget, and travel style. Opening the planner now.';
+      setTimeout(() => window.location.href = '/planner', 3000);
     } else if (lowerCommand.includes('emergency') || lowerCommand.includes('help')) {
-      response = 'For emergencies, call 100 for police, 108 for medical emergency, or contact tourist helpline at +91-3592-202033. Stay safe!';
+      response = 'For emergencies: Police - 100, Medical - 108, Tourist Helpline - +91-3592-202033. For altitude sickness, descend immediately and seek medical help. Stay safe!';
     } else if (lowerCommand.includes('navigate') || lowerCommand.includes('directions')) {
-      response = 'Opening the map.';
-      setTimeout(() => window.location.href = '/map', 2000);
+      response = 'Our interactive map provides GPS navigation, monastery locations, attractions, and services. Opening the map now.';
+      setTimeout(() => window.location.href = '/map', 3000);
     } else {
-      response = 'I can help you with monastery information, bookings, weather, planning trips, emergencies, and navigation. What would you like to know?';
+      response = 'I can help you with monastery information, bookings, weather, trip planning, emergencies, and navigation. What would you like to know about Sikkim?';
     }
 
     speak(response);
@@ -206,7 +206,7 @@ export default function VoiceAssistant() {
       <AnimatePresence>
         {isActive && (
           <motion.div
-            className="fixed bottom-44 right-6 w-80 bg-gradient-to-br from-purple-900/95 to-pink-900/95 backdrop-blur-xl rounded-3xl border-2 border-purple-400/30 shadow-2xl z-40 glass-effect"
+            className="fixed bottom-40 right-6 w-64 bg-gradient-to-br from-purple-900/95 to-pink-900/95 backdrop-blur-xl rounded-3xl border-2 border-purple-400/30 shadow-2xl z-40 glass-effect"
             initial={{ opacity: 0, scale: 0.8, y: 30, rotateX: -15 }}
             animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20, rotateX: 10 }}
@@ -219,7 +219,7 @@ export default function VoiceAssistant() {
             }}
           >
             {/* Header */}
-            <div className="p-6 border-b border-purple-400/20">
+            <div className="p-3 border-b border-purple-400/20">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-white font-bold text-lg">SIKKORA Voice</h3>
@@ -238,11 +238,11 @@ export default function VoiceAssistant() {
             </div>
 
             {/* Voice Controls */}
-            <div className="p-6">
-              <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="p-3">
+              <div className="flex items-center justify-center gap-3 mb-4">
                 <motion.button
                   onClick={isListening ? stopListening : startListening}
-                  className={`w-16 h-16 rounded-full flex items-center justify-center font-bold smooth-transition premium-glow ${
+                  className={`w-12 h-12 rounded-full flex items-center justify-center font-bold smooth-transition premium-glow ${
                     isListening 
                       ? 'bg-red-600 text-white' 
                       : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
@@ -272,13 +272,13 @@ export default function VoiceAssistant() {
                     animate={{ rotate: isListening ? 360 : 0 }}
                     transition={{ duration: 2, repeat: isListening ? Infinity : 0, ease: "linear" }}
                   >
-                    {isListening ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
+                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                   </motion.div>
                 </motion.button>
 
                 <motion.button
                   onClick={isSpeaking ? stopSpeaking : () => speak('Voice assistant is ready to help you explore Sikkim')}
-                  className={`w-12 h-12 rounded-full flex items-center justify-center smooth-transition ${
+                  className={`w-10 h-10 rounded-full flex items-center justify-center smooth-transition ${
                     isSpeaking 
                       ? 'bg-orange-600 text-white premium-glow' 
                       : 'bg-white/20 text-white hover:bg-white/30'
@@ -302,7 +302,7 @@ export default function VoiceAssistant() {
                     animate={{ scale: isSpeaking ? [1, 1.2, 1] : 1 }}
                     transition={{ duration: 0.3, repeat: isSpeaking ? Infinity : 0 }}
                   >
-                    {isSpeaking ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                    {isSpeaking ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                   </motion.div>
                 </motion.button>
               </div>
