@@ -11,7 +11,7 @@ echo Waiting 3 seconds...
 timeout /t 3 /nobreak >nul
 
 echo Starting Frontend Server...
-cd ..\frontend\MysticSikkim
+cd ..\frontend\Sikkora
 start "SIKKORA Frontend" cmd /k "npm run dev"
 
 echo.

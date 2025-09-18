@@ -54,7 +54,7 @@ SIKKORA is a premium web application that provides an immersive experience for e
    npm install
    
    # Install frontend dependencies
-   cd SIH/frontend/MysticSikkim
+   cd SIH/frontend/Sikkora
    npm install
    
    # Install backend dependencies
@@ -81,7 +81,7 @@ SIKKORA is a premium web application that provides an immersive experience for e
    npm start
    
    # Terminal 2 - Frontend
-   cd SIH/frontend/MysticSikkim
+   cd SIH/frontend/Sikkora
    npm run dev
    ```
 
@@ -96,7 +96,7 @@ SIKKORA is a premium web application that provides an immersive experience for e
 Sikkora/
 ├── SIH/
 │   ├── frontend/
-│   │   └── MysticSikkim/
+│   │   └── Sikkora/                # React frontend application
 │   │       ├── src/
 │   │       │   ├── components/     # React components
 │   │       │   ├── pages/          # Page components
@@ -104,17 +104,19 @@ Sikkora/
 │   │       ├── public/
 │   │       │   ├── images/         # Static images
 │   │       │   └── videos/         # Video assets
+│   │       ├── .env               # Frontend environment variables
 │   │       └── package.json
-│   ├── backend/
-│   │   ├── controllers/            # API controllers
-│   │   ├── models/                 # Database models
-│   │   ├── routes/                 # API routes
-│   │   ├── config/                 # Configuration
+│   ├── backend/                   # Node.js backend API
+│   │   ├── controllers/           # API controllers
+│   │   ├── models/                # Database models
+│   │   ├── routes/                # API routes
+│   │   ├── config/                # Configuration
+│   │   ├── .env                   # Backend environment variables
 │   │   └── package.json
 │   └── package.json
-├── start-sikkora.bat              # Quick start script
-├── .gitignore                     # Git ignore rules
-└── README.md                      # Documentation
+├── start-sikkora.bat             # Quick start script
+├── .gitignore                    # Git ignore rules
+└── README.md                     # Documentation
 ```
 
 ## 🎨 Key Components
